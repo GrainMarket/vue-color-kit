@@ -43,13 +43,13 @@
         @selectSucker="selectSucker"
       />
     </div>
-    <Box v-show="show-input-hex"
+    <Box v-show="showInputHex"
       name="HEX"
       :disableInputField="disableInputField"
       :color="modelHex"
       @inputColor="inputHex"
     />
-    <Box v-show="show-input-rgb"
+    <Box v-show="showInputRGB"
       v-if="showAlpha"
       name="RGBA"
       :disableInputField="disableInputField"
@@ -100,6 +100,14 @@ export default defineComponent({
       default: 'dark',
     },
     suckerHide: {
+      type: Boolean,
+      default: true,
+    },
+    showInputHex: {
+      type: Boolean,
+      default: true,
+    },
+    showInputRGB: {
       type: Boolean,
       default: true,
     },
