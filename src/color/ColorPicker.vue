@@ -43,13 +43,13 @@
         @selectSucker="selectSucker"
       />
     </div>
-    <Box
+    <Box v-show="show-input-hex"
       name="HEX"
       :disableInputField="disableInputField"
       :color="modelHex"
       @inputColor="inputHex"
     />
-    <Box
+    <Box v-show="show-input-rgb"
       v-if="showAlpha"
       name="RGBA"
       :disableInputField="disableInputField"
